@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package go.micro.service.hello;
+option go_package = "github.com/chenpeng06/micro-helloworld/proto;hellopb";
+
+service Hello {
+    rpc SayHello(SayRequest) returns (SayResponse){}
+}
+
+message SayRequest {
+    string message = 1;
+}
+
+message SayResponse {
+    string answer = 1;
+}
